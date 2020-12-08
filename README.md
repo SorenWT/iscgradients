@@ -10,4 +10,4 @@ All the code for the analyses in the paper is in two scripts: iscscript.m and ma
 - and last but not least, my own Frankenstein's monster of a Functions repository (https://github.com/SorenWT/Functions)
 
 Each of these needs to be added to the path and set up properly for this to work. The Functions repository should be added with all subfolders.
-Code was run in MATLAB R2020a with all toolboxes, so if a function is missing for you, it may be an obscure MATLAB toolbox function.Y
+Code was run in MATLAB R2020a with all toolboxes, so if a function is missing for you, it may be an obscure MATLAB toolbox function.
