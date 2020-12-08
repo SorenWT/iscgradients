@@ -380,27 +380,6 @@ for i = 1:268
     lambda_dm_p(:,i) = 1-sum(lambda_dm(:,i) > eigshuf_dm(:,:,i),2)/100;
 end
 
-% approach 2: cross-validation
-%
-% for i = 1:268
-%     X = isczmats(:,:,i);
-%     %cvp = cvpartition(184,'KFold',10);
-%     gshuf = GradientMaps('kernel','pearson','approach','pca');
-%     for q = 1:10
-%        ind = randperm(184,165);
-%        ind2 = except(1:184,ind);
-%        xnot1{q} = X(ind,:);
-%        x1(:,:,q) = X(ind2,:);
-%     end
-%     gshuf = gshuf.fit(xnot1);
-%     scrs = cat(3,gshuf.gradients{:});
-%     for q = 1:10
-%         for n = 1:size(scrs,1)
-%
-%         end
-%     end
-% end
-
 % gradient alignment: joint embedding within a priori networks
 
 cisczmats = mat2cell(isczmats,184,184,ones(1,268));
@@ -744,22 +723,6 @@ for k = 8
 %     sil2(:,k) = silhouette(squeeze(allcomps(:,2,:))',cl(:,k),'correlation');
 %     meansilscore(k) = (mean(sil1(:,k))+mean(sil2(:,k)))/2;
 end
-
-
-% ztmp = rtoz(proccorrmat_pca(:,:,1)); ztmp(ztmp==Inf) = 0;
-% pcaofpca = gpca_proc.fit({ztmp},'sparsity',0);
-% 
-% gshuf = GradientMaps('kernel','pearson','approach','pca');
-% shuf = cell(1,100);
-% for n = 1:100
-%     shuf{n} = zeros(size(ztmp));
-%     for dim = 1:size(ztmp,2)
-%         shuf{n}(:,dim) = ztmp(randperm(268),dim);
-%     end
-% end
-% gshuf = gshuf.fit(shuf,'sparsity',0);
-% eigshuf_proccorrmat = [gshuf.lambda{:}];
-% pcaofpca_lambda_p = 1-(sum(pcaofpca.lambda{1}>eigshuf_proccorrmat,2)/100);
 
 % big figure on PCA alignment
 figure

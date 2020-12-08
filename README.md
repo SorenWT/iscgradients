@@ -5,8 +5,9 @@ All the code for the analyses in the paper is in two scripts: iscscript.m and ma
 - Fieldtrip (https://github.com/fieldtrip/fieldtrip)
 - BrainSpace (https://github.com/MICA-MNI/BrainSpace)
 - SPM12 (https://www.fil.ion.ucl.ac.uk/spm/software/spm12/)
+- The raw data from Finn et al. (2020) (https://github.com/esfinn/intersubj_rsa)
 - Panel (for plotting figures: https://www.mathworks.com/matlabcentral/fileexchange/20003-panel)
 - and last but not least, my own Frankenstein's monster of a Functions repository (https://github.com/SorenWT/Functions)
 
-Each of these needs to be added to the path and set up properly for this to work. 
-Code was run in MATLAB R2020a with all toolboxes, so if a function is missing, it may be an obscure MATLAB toolbox function.
+Each of these needs to be added to the path and set up properly for this to work. The Functions repository should be added with all subfolders.
+Code was run in MATLAB R2020a with all toolboxes, so if a function is missing for you, it may be an obscure MATLAB toolbox function.Y
