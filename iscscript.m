@@ -501,6 +501,10 @@ pcorr_mean_eigpca = 1-mean(rho_mean_eigpca>corr(iscvals',squeeze(eig_rand_pca),'
 rho_eigpca_eigdm = corr(lambda_pca(1,:)',lambda_dm(1,:)','type','spearman');
 pcorr_eigpca_eigdm = 1-mean(rho_eigpca_eigdm>corr(lambda_dm(1,:)',squeeze(eig_rand_pca),'type','spearman'));
 
+rho_mean_eigdm = corr(lambda_dm(1,:)',iscvals','type','spearman');
+pcorr_mean_eigdm = 1-mean(rho_mean_eigdm>corr(iscvals',squeeze(eig_rand_dm),'type','spearman'));
+
+
 % alignment figure
 
 l = flag; l = l([3 1],:);
